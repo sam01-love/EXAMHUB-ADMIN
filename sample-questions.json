@@ -1,0 +1,19 @@
+[
+  {
+    "subject": "mathematics",
+    "stream": "science",
+    "instruction": "Number bases",
+    "prompt": "Convert 1101₂ to base 10.",
+    "options": ["11", "12", "13", "14"],
+    "answer": 2,
+    "explanation": "1101₂ = 8 + 4 + 0 + 1 = 13."
+  },
+  {
+    "subject": "english",
+    "instruction": "Vocabulary — synonyms",
+    "prompt": "Choose the word nearest in meaning to \"vivid\".",
+    "options": ["Dull", "Bright", "Quiet", "Empty"],
+    "answer": 1,
+    "explanation": "\"Vivid\" means strikingly bright or clear."
+  }
+]

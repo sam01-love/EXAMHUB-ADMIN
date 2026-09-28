@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-tertiary: var(--tertiary);
+  --color-tertiary-foreground: var(--tertiary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --font-sans: var(--font-sans);
+  --font-heading: var(--font-heading);
+  --font-mono: var(--font-mono);
+}
+
+:root {
+  --background: #F7F9FC;
+  --foreground: #111827;
+  --primary: #1455D9;
+  --primary-foreground: #FFFFFF;
+  --secondary: #EAF2FF;
+  --secondary-foreground: #0B1F44;
+  --tertiary: #16A34A;
+  --tertiary-foreground: #FFFFFF;
+  --muted: #EAF2FF;
+  --muted-foreground: #52627A;
+  --accent: #DBEAFE;
+  --accent-foreground: #0B1F44;
+  --card: #FFFFFF;
+  --card-foreground: #111827;
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+  --border: #D8E2F1;
+  --input: #D8E2F1;
+  --ring: #1455D9;
+  --radius: 0.75rem;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Manrope', 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+  .bg-card { color: var(--card-foreground); }
+  .bg-primary { color: var(--primary-foreground); }
+  .bg-secondary { color: var(--secondary-foreground); }
+  .bg-accent { color: var(--accent-foreground); }
+  .bg-tertiary { color: var(--tertiary-foreground); }
+  .bg-destructive { color: var(--destructive-foreground); }
+}
+
+@layer utilities {
+  .shadow-theme {
+    box-shadow: 0 10px 30px -8px rgba(15, 23, 42, 0.12);
+  }
+  .scrollbar-none::-webkit-scrollbar { display: none; }
+  .scrollbar-none { scrollbar-width: none; }
+}
